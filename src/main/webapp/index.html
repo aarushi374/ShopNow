@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta name="viewport" content="width=780px" />
+
+<title>ShopNow</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://kit.fontawesome.com/1a87f1ecb3.js"
+	crossorigin="anonymous"></script>
+
+</head>
+<body>
+	<nav>
+		<p class="title">ShopNow</p>
+		<button class="btn_nav" onclick="location.href = './Cart.jsp';">
+			<i class="fas fa-shopping-cart"></i>Cart
+		</button>
+	</nav>
+	<div class="layout">
+		<div class="layout_text">Categories</div>
+		<a href="#grocery" class="layout_nav">Grocery</a> <a href="#beauty"
+			class="layout_nav">Beauty</a> <a href="#fashion" class="layout_nav">Fashion</a>
+		<a href="#electronics" class="layout_nav">Electronics</a> <a
+			href="#kitchen" class="layout_nav">Kitchen</a> <a href="#home"
+			class="layout_nav">Home</a>
+	</div>
+	<div class="slideshow">
+
+		<div class="mySlides fade">
+			<img src="sale1.jpg" class="sale_img">
+		</div>
+
+		<div class="mySlides fade">
+			<img src="sale2.jpg" class="sale_img">
+		</div>
+
+		<div class="mySlides fade">
+			<img src="sale3.jpg" class="sale_img">
+		</div>
+		<div class="mySlides fade">
+			<img src="sale4.jpg" class="sale_img">
+		</div>
+
+	</div>
+	<br>
+
+	<div style="text-align: center">
+		<span class="dot"></span> <span class="dot"></span> <span class="dot"></span>
+		<span class="dot"></span>
+	</div>
+	<div class="slideshow-container" id="electronics">
+		<p class="category">Electronics</p>
+		<div class="myElectronics fade">
+			<div class="container-left">
+				<form action="MyServlet" method="post">
+					<img class="product_img" src="camera.jpeg"> <input
+						type=hidden name=image value="camera.jpeg" />
+					<p class="product_name">Canon EOS 3000D</p>
+					<input type="hidden" name="name" value="Canon EOS 3000D" />
+					<p class="product_price">Rs 27,921</p>
+					<input type="hidden" name="price" value="27921" /> <label
+						class="quantity">Quantity</label><input type="number" value=1
+						id="quantity" class="quantity_input" name="quantity" min="1">
+					<button class="btn_addcart" name="cart">+ Add to Cart</button>
+				</form>
+			</div>
+			<div class="container-center">
+				<form action="MyServlet" method="post">
+					<img class="product_img" src="tv.jpeg"> <input type=hidden
+						name=image value="tv.jpeg" />
+					<p class="product_name">Samsung LED TV(32 inch)</p>
+					<input type="hidden" name="name" value="Samsung LED TV(32 inch)" />
+					<p class="product_price">Rs 16,299</p>
+					<input type="hidden" name="price" value="16299" /> <label
+						class="quantity">Quantity</label><input type="number" value=1
+						id="quantity" class="quantity_input" name="quantity" min="1">
+					<button class="btn_addcart" name="cart">+ Add to Cart</button>
+				</form>
+			</div>
+			<div class="container-right">
+				<form action="MyServlet" method="post">
+					<img class="product_img" src="computer.jpeg"> <input
+						type=hidden name=image value="computer.jpeg" />
+					<p class="product_name">Lenovo Ideacentre 520 Core i3</p>
+					<input type="hidden" name="name"
+						value="Lenovo Ideacentre 520 Core i3" />
+
+					<p class="product_price">Rs 33,270</p>
+					<input type="hidden" name="price" value="33270" /> <label
+						class="quantity">Quantity</label><input type="number" value=1
+						id="quantity" class="quantity_input" name="quantity" min="1">
+					<button class="btn_addcart" name="cart">+ Add to Cart</button>
+				</form>
+			</div>
+		</div>
+		<div class="myElectronics fade">
+			<div class="container-left">
+				<form action="MyServlet" method="post">
+
+					<img class="product_img" src="headphone.jpeg"> <input
+						type=hidden name=image value="headphone.jpeg" />
+
+					<p class="product_name">Boat Headphone</p>
+					<input type="hidden" name="name" value="Boat Headphone" />
+
+					<p class="product_price">Rs 599</p>
+					<input type="hidden" name="price" value="599" /> <label
+						class="quantity">Quantity</label><input type="number" value=1
+						id="quantity" class="quantity_input" name="quantity" min="1">
+					<button class="btn_addcart" name="cart">+ Add to Cart</button>
+				</form>
+			</div>
+			<div class="container-center">
+				<form action="MyServlet" method="post">
+
+					<img class="product_img" src="phone.jpeg"> <input type=hidden
+						name=image value="phone.jpeg" />
+
+					<p class="product_name">VIVO Y12s</p>
+					<input type="hidden" name="name" value="VIVO Y12s" />
+
+					<p class="product_price">Rs 10,990</p>
+					<input type="hidden" name="price" value="102990" /> <label
+						class="quantity">Quantity</label><input type="number" value=1
+						id="quantity" class="quantity_input" name="quantity" min="1">
+					<button class="btn_addcart" name="cart">+ Add to Cart</button>
+				</form>
+			</div>
+			<div class="container-right">
+				<form action="MyServlet" method="post">
+
+					<img class="product_img" src="tablet.jpeg"> <input
+						type=hidden name=image value="tablet.jpeg" />
+
+					<p class="product_name">iPad (8th Gen)</p>
+					<input type="hidden" name="name" value="iPad (8th Gen)" />
+
+					<p class="product_price">Rs 37,900</p>
+					<input type="hidden" name="price" value="37900" /> <label
+						class="quantity">Quantity</label><input type="number" value=1
+						id="quantity" class="quantity_input" name="quantity" min="1">
+					<button class="btn_addcart" name=cart>+ Add to Cart</button>
+				</form>
+			</div>
+		</div>
+		<a class="prev" onclick="plusSlides(-1,0)">&#10094;</a> <a
+			class="next" onclick="plusSlides(1,0)">&#10095;</a>
+	</div>
+	<br>
+	<div class="slideshow-container">
+		<p class="category" id="grocery">Grocery</p>
+		<div class="myGrocery fade">
+			<div class="container-left">
+				<form action="MyServlet" method="post">
+
+					<img class="product_img" src="atta.jpeg"> <input type=hidden
+						name=image value="atta.jpeg" />
+
+					<p class="product_name">Fortune Chakki Fresh Atta</p>
+					<input type="hidden" name="name" value="Fortune Chakki Fresh Atta" />
+
+					<p class="product_price">Rs 165</p>
+					<input type="hidden" name="price" value="165" /> <label
+						class="quantity">Quantity</label><input type="number" value=1
+						id="quantity" class="quantity_input" name="quantity" min="1">
+					<button class="btn_addcart" name="cart">+ Add to Cart</button>
+				</form>
+			</div>
+			<div class="container-center">
+				<form action="MyServlet" method="post">
+
+					<img class="product_img" src="rice.jpeg"> <input type=hidden
+						name=image value="rice.jpeg" />
+					<p class="product_name">Basmati Rice</p>
+					<input type="hidden" name="name" value="Basmati Rice" />
+
+					<p class="product_price">Rs 250</p>
+					<input type="hidden" name="price" value="250" /> <label
+						class="quantity">Quantity</label><input type="number" value=1
+						id="quantity" class="quantity_input" name="quantity" min="1">
+					<button class="btn_addcart" name="cart">+ Add to Cart</button>
+				</form>
+			</div>
+			<div class="container-right">
+				<form action="MyServlet" method="post">
+
+					<img class="product_img" src="corn_flakes.jpeg"> <input
+						type=hidden name=image value="corn_flakes.jpeg" />
+
+					<p class="product_name">Kellogg's Original Corn Flakes</p>
+					<input type="hidden" name="name"
+						value="Kellogg's Original Corn Flakes" />
+
+					<p class="product_price">Rs 330</p>
+					<input type="hidden" name="price" value="330" /> <label
+						class="quantity">Quantity</label><input type="number" value=1
+						id="quantity" class="quantity_input" name="quantity" min="1">
+					<button class="btn_addcart" name="cart">+ Add to Cart</button>
+				</form>
+			</div>
+		</div>
+		<div class="myGrocery fade">
+			<div class="container-left">
+				<form action="MyServlet" method="post">
+
+					<img class="product_img" src="chocolate.jpeg"> <input
+						type=hidden name=image value="chocolate.jpeg" />
+
+					<p class="product_name">Dairy Milk Home Treats</p>
+					<input type="hidden" name="name" value="Dairy Milk Home Treats" />
+
+					<p class="product_price">Rs 111</p>
+					<input type="hidden" name="price" value="111" /> <label
+						class="quantity">Quantity</label><input type="number" value=1
+						id="quantity" class="quantity_input" name="quantity" min="1">
+					<button class="btn_addcart" name="cart">+ Add to Cart</button>
+				</form>
+			</div>
+			<div class="container-center">
+				<form action="MyServlet" method="post">
+
+					<img class="product_img" src="noodles.jpeg"> <input
+						type=hidden name=image value="noodles.jpeg" />
+
+					<p class="product_name">Veg Hakka Noodles</p>
+					<input type="hidden" name="name" value="Veg Hakka Noodles" />
+
+					<p class="product_price">Rs 80</p>
+					<input type="hidden" name="price" value="80" /> <label
+						class="quantity">Quantity</label><input type="number" value=1
+						id="quantity" class="quantity_input" name="quantity" min="1">
+					<button class="btn_addcart" name="cart">+ Add to Cart</button>
+				</form>
+			</div>
+			<div class="container-right">
+				<form action="MyServlet" method="post">
+
+					<img class="product_img" src="oil.jpeg"> <input type=hidden
+						name=image value="oil.jpeg" />
+
+					<p class="product_name">Fortune Refined Soyabean Oil</p>
+					<input type="hidden" name="name"
+						value="Fortune Refined Soyabean Oil" />
+
+					<p class="product_price">Rs 170</p>
+					<input type="hidden" name="price" value="170" /> <label
+						class="quantity">Quantity</label><input type="number" value=1
+						id="quantity" class="quantity_input" name="quantity" min="1">
+					<button class="btn_addcart" name="cart">+ Add to Cart</button>
+				</form>
+			</div>
+		</div>
+
+		<a class="prev" onclick="plusSlides(-1,1)">&#10094;</a> <a
+			class="next" onclick="plusSlides(1,1)">&#10095;</a>
+
+	</div>
+	<div class="slideshow-container">
+		<p class="category" id="beauty">Beauty</p>
+		<div class="myBeauty fade">
+			<div class="container-left">
+				<form action="MyServlet" method="post">
+
+					<img class="product_img" src="body_wash.jpeg"> <input
+						type=hidden name="image" value="body_wash.jpeg" />
+
+					<p class="product_name">PALMOLIVE Body Wash</p>
+					<input type="hidden" name="name" value="PALMOLIVE Body Wash" />
+
+					<p class="product_price">Rs 299</p>
+					<input type="hidden" name="price" value="299" /> <label
+						class="quantity">Quantity</label><input type="number" value=1
+						id="quantity" class="quantity_input" name="quantity" min="1">
+					<button class="btn_addcart" name="cart">+ Add to Cart</button>
+				</form>
+			</div>
+			<div class="container-center">
+				<form action="MyServlet" method="post">
+
+					<img class="product_img" src="deodrant.jpeg"> <input
+						type=hidden name=image value="deodrant.jpeg" />
+
+					<p class="product_name">Secret Temptation Body Mist</p>
+					<input type="hidden" name="name"
+						value="Secret Temptation Body Mist" />
+
+					<p class="product_price">Rs 302</p>
+					<input type="hidden" name="price" value="302" /> <label
+						class="quantity">Quantity</label><input type="number" value=1
+						id="quantity" class="quantity_input" name="quantity" min="1">
+					<button class="btn_addcart" name="cart">+ Add to Cart</button>
+				</form>
+			</div>
+			<div class="container-right">
+				<form action="MyServlet" method="post">
+
+					<img class="product_img" src="eyeshadow.jpeg"> <input
+						type=hidden name=image value="eyeshadow.jpeg" />
+
+					<p class="product_name">MAYBELLINE Eyeshadow</p>
+					<input type="hidden" name="name" value="MAYBELLINE Eyeshadow" />
+
+					<p class="product_price">Rs 556</p>
+					<input type="hidden" name="price" value="566" /> <label
+						class="quantity">Quantity</label><input type="number" value=1
+						id="quantity" class="quantity_input" name="quantity" min="1">
+					<button class="btn_addcart" name="cart">+ Add to Cart</button>
+				</form>
+			</div>
+		</div>
+		<div class="myBeauty fade">
+			<div class="container-left">
+				<form action="MyServlet" method="post">
+					<img class="product_img" src="hair_oil.jpeg"> <input
+						type=hidden name=image value="hair_oil.jpeg" />
+
+					<p class="product_name">Parachute Hair Oil</p>
+					<input type="hidden" name="name" value="Parachute Hair Oil" />
+
+					<p class="product_price">Rs 170</p>
+					<input type="hidden" name="price" value="170" /> <label
+						class="quantity">Quantity</label><input type="number" value=1
+						id="quantity" class="quantity_input" name="quantity" min="1">
+					<button class="btn_addcart" name="cart">+ Add to Cart</button>
+				</form>
+			</div>
+			<div class="container-center">
+				<form action="MyServlet" method="post">
+
+					<img class="product_img" src="lotion.jpeg"> <input
+						type=hidden name=image value="lotion.jpeg" />
+
+					<p class="product_name">Vaseline Body Lotion</p>
+					<input type="hidden" name="name" value="Vaseline Body Lotion" />
+
+					<p class="product_price">Rs 292</p>
+					<input type="hidden" name="price" value="292" /> <label
+						class="quantity">Quantity</label><input type="number" value=1
+						id="quantity" class="quantity_input" name="quantity" min="1">
+					<button class="btn_addcart" name="cart">+ Add to Cart</button>
+				</form>
+			</div>
+			<div class="container-right">
+				<form action="MyServlet" method="post">
+
+					<img class="product_img" src="shampoo.jpeg"> <input
+						type=hidden name=image value="shampoo.jpeg" />
+
+					<p class="product_name">SUNSILK Shine Shampoo</p>
+					<input type="hidden" name="name" value="SUNSILK Shine Shampoo" />
+
+					<p class="product_price">Rs 177</p>
+					<input type="hidden" name="price" value="177" /> <label
+						class="quantity">Quantity</label><input type="number" value=1
+						id="quantity" class="quantity_input" name="quantity" min="1">
+					<button class="btn_addcart" name="cart">+ Add to Cart</button>
+				</form>
+			</div>
+		</div>
+
+		<a class="prev" onclick="plusSlides(-1,2)">&#10094;</a> <a
+			class="next" onclick="plusSlides(1,2)">&#10095;</a>
+
+	</div>
+	<div class="slideshow-container">
+		<p class="category" id="fashion">Fashion</p>
+		<div class="myFashion fade">
+			<div class="container-left">
+				<form action="MyServlet" method="post">
+
+					<img class="product_img" src="dress.jpeg"> <input type=hidden
+						name=image value="dress.jpeg" />
+
+					<p class="product_name">Maxi White Dress</p>
+					<input type="hidden" name="name" value="Maxi White Dress" />
+
+					<p class="product_price">Rs 433</p>
+					<input type="hidden" name="price" value="433" /> <label
+						class="quantity">Quantity</label><input type="number" value=1
+						id="quantity" class="quantity_input" name="quantity" min="1">
+					<button class="btn_addcart" name="cart">+ Add to Cart</button>
+				</form>
+			</div>
+			<div class="container-center">
+				<form action="MyServlet" method="post">
+
+					<img class="product_img" src="heels.jpeg"> <input type=hidden
+						name=image value="heels.jpeg" />
+
+					<p class="product_name">Gold Black Heels</p>
+					<input type="hidden" name="name" value="Gold Black Heels" />
+
+					<p class="product_price">Rs 510</p>
+					<input type="hidden" name="price" value="510" /> <label
+						class="quantity">Quantity</label><input type="number" value=1
+						id="quantity" class="quantity_input" name="quantity" min="1">
+					<button class="btn_addcart" name="cart">+ Add to Cart</button>
+				</form>
+			</div>
+			<div class="container-right">
+				<form action="MyServlet" method="post">
+
+					<img class="product_img" src="jacket_man.jpeg"> <input
+						type=hidden name=image value="jacket_man.jpeg" />
+
+					<p class="product_name">Full Sleeve Denim Jacket</p>
+					<input type="hidden" name="name" value="Full Sleeve Denim Jacket" />
+
+					<p class="product_price">Rs 899</p>
+					<input type="hidden" name="price" value="899" /> <label
+						class="quantity">Quantity</label><input type="number" value=1
+						id="quantity" class="quantity_input" name="quantity" min="1">
+					<button class="btn_addcart" name="cart">+ Add to Cart</button>
+				</form>
+			</div>
+		</div>
+		<div class="myFashion fade">
+			<div class="container-left">
+				<form action="MyServlet" method="post">
+
+					<img class="product_img" src="kurta.jpeg"> <input type=hidden
+						name=image value="kurta.jpeg" />
+
+					<p class="product_name">Solid Cotton Kurta</p>
+					<input type="hidden" name="name" value="Solid Cotton Kurta" />
+
+					<p class="product_price">Rs 449</p>
+					<input type="hidden" name="price" value="499" /> <label
+						class="quantity">Quantity</label><input type="number" value=1
+						id="quantity" class="quantity_input" name="quantity" min="1">
+					<button class="btn_addcart" name="cart">+ Add to Cart</button>
+				</form>
+			</div>
+			<div class="container-center">
+				<form action="MyServlet" method="post">
+
+					<img class="product_img" src="saree.jpeg"> <input type=hidden
+						name=image value="saree.jpeg" />
+
+					<p class="product_name">Polka Print Saree</p>
+					<input type="hidden" name="name" value="Polka Print Saree" />
+
+					<p class="product_price">Rs 266</p>
+					<input type="hidden" name="price" value="266" /> <label
+						class="quantity">Quantity</label><input type="number" value=1
+						id="quantity" class="quantity_input" name="quantity" min="1">
+					<button class="btn_addcart" name="cart">+ Add to Cart</button>
+				</form>
+			</div>
+			<div class="container-right">
+				<form action="MyServlet" method="post">
+
+					<img class="product_img" src="shoes.jpeg"> <input type=hidden
+						name=image value="shoes.jpeg" />
+
+					<p class="product_name">Trendy Sports Shoes</p>
+					<input type="hidden" name="name" value="Trendy Sports Shoes" />
+
+					<p class="product_price">Rs 359</p>
+					<input type="hidden" name="price" value="359" /> <label
+						class="quantity">Quantity</label><input type="number" value=1
+						id="quantity" class="quantity_input" name="quantity" min="1">
+					<button class="btn_addcart" name="cart">+ Add to Cart</button>
+				</form>
+			</div>
+		</div>
+
+		<a class="prev" onclick="plusSlides(-1,3)">&#10094;</a> <a
+			class="next" onclick="plusSlides(1,3)">&#10095;</a>
+
+	</div>
+	<div class="slideshow-container">
+		<p class="category" id="home">Home</p>
+		<div class="myHome fade">
+			<div class="container-left">
+				<form action="MyServlet" method="post">
+
+					<img class="product_img" src="bedsheet.jpeg"> <input
+						type=hidden name=image value="bedsheet.jpeg" />
+
+					<p class="product_name">Double Floral Bedsheet</p>
+					<input type="hidden" name="name" value="Double Floral Bedsheet" />
+
+					<p class="product_price">Rs 303</p>
+					<input type="hidden" name="price" value="303" /> <label
+						class="quantity">Quantity</label><input type="number" value=1
+						id="quantity" class="quantity_input" name="quantity" min="1">
+					<button class="btn_addcart" name='cart'>+ Add to Cart</button>
+				</form>
+			</div>
+			<div class="container-center">
+				<form action="MyServlet" method="post">
+
+					<img class="product_img" src="carpet.jpeg"> <input
+						type=hidden name=image value="carpet.jpeg" />
+
+					<p class="product_name">Handloom Yellow Carpet</p>
+					<input type="hidden" name="name" value="Handloom Yellow Carpet" />
+
+					<p class="product_price">Rs 2,299</p>
+					<input type="hidden" name="price" value="2299" /> <label
+						class="quantity">Quantity</label><input type="number" value=1
+						id="quantity" class="quantity_input" name="quantity" min="1">
+					<button class="btn_addcart" name="cart">+ Add to Cart</button>
+				</form>
+			</div>
+			<div class="container-right">
+				<form action="MyServlet" method="post">
+
+					<img class="product_img" src="curtains.jpeg"> <input
+						type=hidden name=image value="curtains.jpeg" />
+
+					<p class="product_name">Adimanav Door Curtain</p>
+					<input type="hidden" name="name" value="Adimanav Door Curtain" />
+
+					<p class="product_price">Rs 569</p>
+					<input type="hidden" name="price" value="569" /> <label
+						class="quantity">Quantity</label><input type="number" value=1
+						id="quantity" class="quantity_input" name="quantity" min="1">
+					<button class="btn_addcart" name="cart">+ Add to Cart</button>
+				</form>
+			</div>
+		</div>
+		<div class="myHome fade">
+			<div class="container-left">
+				<form action="MyServlet" method="post">
+
+					<img class="product_img" src="dining_table.jpeg"> <input
+						type=hidden name=image value="dining_table.jpeg" />
+
+					<p class="product_name">Kendalwood Dining Table</p>
+					<input type="hidden" name="name" value="Kendalwood Dining Table" />
+
+					<p class="product_price">Rs 19,999</p>
+					<input type="hidden" name="price" value="19999" /> <label
+						class="quantity">Quantity</label><input type="number" value=1
+						id="quantity" class="quantity_input" name="quantity" min="1">
+					<button class="btn_addcart" name="cart">+ Add to Cart</button>
+				</form>
+			</div>
+			<div class="container-center">
+				<form action="MyServlet" method="post">
+
+					<img class="product_img" src="diwan.jpeg"> <input type=hidden
+						name=image value="diwan.jpeg" />
+
+					<p class="product_name">TREVI Wood Diwan</p>
+					<input type="hidden" name="name" value="TREVI Wood Diwan" />
+
+					<p class="product_price">Rs 6,599</p>
+					<input type="hidden" name="price" value="6599" /> <label
+						class="quantity">Quantity</label><input type="number" value=1
+						id="quantity" class="quantity_input" name="quantity" min="1">
+					<button class="btn_addcart" name="cart">+ Add to Cart</button>
+				</form>
+			</div>
+			<div class="container-right">
+				<form action="MyServlet" method="post">
+
+					<img class="product_img" src="matress.jpeg"> <input
+						type=hidden name=image value="matress.jpeg" />
+
+					<p class="product_name">Wakefit Foam Mattress</p>
+					<input type="hidden" name="name" value="Wakefit Foam Mattress" />
+
+					<p class="product_price">Rs 10,087</p>
+					<input type="hidden" name="price" value="10087" /> <label
+						class="quantity">Quantity</label><input type="number" value=1
+						id="quantity" class="quantity_input" name="quantity" min="1">
+					<button class="btn_addcart" name="cart">+ Add to Cart</button>
+				</form>
+			</div>
+		</div>
+
+		<a class="prev" onclick="plusSlides(-1,4)">&#10094;</a> <a
+			class="next" onclick="plusSlides(1,4)">&#10095;</a>
+
+	</div>
+	<div class="slideshow-container">
+		<p class="category" id="kitchen">Kitchen</p>
+		<div class="myKitchen fade">
+			<div class="container-left">
+				<form action="MyServlet" method="post">
+
+					<img class="product_img" src="containers.jpeg"> <input
+						type=hidden name=image value="containers.jpeg" />
+
+					<p class="product_name">MASTER COOK Container</p>
+					<input type="hidden" name="name" value="MASTER COOK Container" />
+
+					<p class="product_price">Rs 540</p>
+					<input type="hidden" name="price" value="540" /> <label
+						class="quantity">Quantity</label><input type="number" value=1
+						id="quantity" class="quantity_input" name="quantity" min="1">
+					<button class="btn_addcart" name="cart">+ Add to Cart</button>
+				</form>
+			</div>
+			<div class="container-center">
+				<form action="MyServlet" method="post">
+
+					<img class="product_img" src="cooker.jpeg"> <input
+						type=hidden name=image value="cooker.jpeg" />
+
+					<p class="product_name">Pressure Cooker</p>
+					<input type="hidden" name="name" value="Pressure Cooker" />
+
+					<p class="product_price">Rs 711</p>
+					<input type="hidden" name="price" value="711" /> <label
+						class="quantity">Quantity</label><input type="number" value=1
+						id="quantity" class="quantity_input" name="quantity" min="1">
+					<button class="btn_addcart" name="cart">+ Add to Cart</button>
+				</form>
+			</div>
+			<div class="container-right">
+				<form action="MyServlet" method="post">
+
+					<img class="product_img" src="dinner_set.jpeg"> <input
+						type=hidden name=image value="dinner_set.jpeg" />
+
+					<p class="product_name">Cello Dinner Set</p>
+					<input type="hidden" name="name" value="Cello Dinner Set" />
+
+					<p class="product_price">Rs 1,829</p>
+					<input type="hidden" name="price" value="1829" /> <label
+						class="quantity">Quantity</label><input type="number" value=1
+						id="quantity" class="quantity_input" name="quantity" min="1">
+					<button class="btn_addcart" name="cart">+ Add to Cart</button>
+				</form>
+			</div>
+		</div>
+		<div class="myKitchen fade">
+			<div class="container-left">
+				<form action="MyServlet" method="post">
+
+					<img class="product_img" src="gas_stove.jpeg"> <input
+						type=hidden name=image value="gas_stove.jpeg" />
+
+					<p class="product_name">Stainless Steel Gas Stove</p>
+					<input type="hidden" name="name" value="Stainless Steel Gas Stove" />
+
+					<p class="product_price">Rs 3,020</p>
+					<input type="hidden" name="price" value="3020" /> <label
+						class="quantity">Quantity</label><input type="number" value=1
+						id="quantity" class="quantity_input" name="quantity" min="1">
+					<button class="btn_addcart" name="cart">+ Add to Cart</button>
+				</form>
+			</div>
+			<div class="container-center">
+				<form action="MyServlet" method="post">
+
+					<img class="product_img" src="spoons.jpeg"> <input
+						type=hidden name=image value="spoons.jpeg" />
+
+					<p class="product_name">Craftkings Spoon set</p>
+					<input type="hidden" name="name" value="Craftkings Spoon set" />
+
+					<p class="product_price">Rs199</p>
+					<input type="hidden" name="price" value="199" /> <label
+						class="quantity">Quantity</label><input type="number" value=1
+						id="quantity" class="quantity_input" name="quantity" min="1">
+					<button class="btn_addcart" name="cart">+ Add to Cart</button>
+				</form>
+			</div>
+			<div class="container-right">
+				<form action="MyServlet" method="post">
+
+					<img class="product_img" src="water_bottle.jpeg"> <input
+						type=hidden name=image value="water_bottle.jpeg" />
+
+					<p class="product_name">WATER BOTTLES 1000 ml</p>
+					<input type="hidden" name="name" value="WATER BOTTLES 1000 ml" />
+
+					<p class="product_price">Rs 419</p>
+					<input type="hidden" name="price" value="419" /> <label
+						class="quantity">Quantity</label><input type="number" value=1
+						id="quantity" class="quantity_input" name="quantity" min="1">
+					<button class="btn_addcart" name="cart">+ Add to Cart</button>
+				</form>
+			</div>
+		</div>
+
+		<a class="prev" onclick="plusSlides(-1,5)">&#10094;</a> <a
+			class="next" onclick="plusSlides(1,5)">&#10095;</a>
+
+	</div>
+	<div class="footer">
+		<div class="foot">
+			<p class="foot_heading">Mail Us</p>
+			<p class="foot_txt">ShopNow@gmail.com</p>
+		</div>
+		<div class="foot">
+			<p class="foot_heading">Social</p>
+			<p class="foot_txt">
+				<i class="fab fa-facebook-f"></i> <i class="fab fa-twitter"></i> <i
+					class="fab fa-youtube"></i>
+			</p>
+		</div>
+		<div class="foot">
+			<p class="foot_heading">Contact</p>
+			<p class="foot_txt">1800 254 73XX</p>
+		</div>
+		<div class="foot">
+			<p class="foot_heading">Office Address</p>
+			<p class="foot_txt">ShopNow Jaipur,Rajasthan</p>
+		</div>
+	</div>
+	<script>
+		var slideIndex = 0;
+		showSlides();
+
+		function showSlides() {
+			var i;
+			var slides = document.getElementsByClassName("mySlides");
+			var dots = document.getElementsByClassName("dot");
+			for (i = 0; i < slides.length; i++) {
+				slides[i].style.display = "none";
+			}
+			slideIndex++;
+			if (slideIndex > slides.length) {
+				slideIndex = 1
+			}
+			for (i = 0; i < dots.length; i++) {
+				dots[i].className = dots[i].className.replace(" active", "");
+			}
+			slides[slideIndex - 1].style.display = "block";
+			dots[slideIndex - 1].className += " active";
+			setTimeout(showSlides, 5000);
+		}
+
+		var productIndex = [ 1, 1, 1, 1, 1, 1 ];
+		var productId = [ "myElectronics", "myGrocery", "myBeauty",
+				"myFashion", "myHome", "myKitchen" ]
+		productSlides(1, 0);
+		productSlides(1, 1);
+		productSlides(1, 2);
+		productSlides(1, 3);
+		productSlides(1, 4);
+		productSlides(1, 5);
+
+		function plusSlides(n, no) {
+			productSlides(productIndex[no] += n, no);
+		}
+
+		function productSlides(n, no) {
+			var i;
+			var slides = document.getElementsByClassName(productId[no]);
+			if (n > slides.length) {
+				productIndex[no] = 1
+			}
+			if (n < 1) {
+				productIndex[no] = slides.length
+			}
+			for (i = 0; i < slides.length; i++) {
+				slides[i].style.display = "none";
+			}
+			slides[productIndex[no] - 1].style.display = "block";
+		}
+	</script>
+</body>
+</html>

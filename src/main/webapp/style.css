@@ -1,0 +1,519 @@
+.mySlides {
+  display: none;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  width: 90%;
+  position: relative;
+  margin: 5% auto;
+  display: block;
+}
+
+.slideshow,
+.sale_img {
+  width: 100%;
+  height: 600px;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: black;
+  font-weight: bold;
+  font-size: 30px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: .4
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: .4
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+.container-center,
+.container-left,
+.container-right {
+  display: inline-block;
+  width: 20%;
+  height: 380px;
+  border-style: outset;
+  padding: 2%;
+  border-radius: 10px;
+}
+
+.container-center {
+  margin: 2%;
+}
+
+.container-left {
+  margin-left: 10%;
+}
+
+.container-right {
+  margin-right: 6%;
+}
+
+.container-center:hover,
+.container-right:hover,
+.container-left:hover {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+@media screen and (max-width: 780px) {
+
+  .container-center,
+  .container-left,
+  .container-right {
+    height: 350px;
+  }
+}
+
+.product_name {
+  font-style: normal;
+  font-weight: bold;
+  margin-top: 20px;
+  font-size: 17px;
+}
+
+/*@media screen and (max-width: 780px){
+.product_name{line-height:17px;}
+}*/
+.product_price {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* On smaller screens, decrease text size */
+.product_img {
+  width: 200px;
+  height: 250px;
+  margin: 0 auto;
+  display: block;
+}
+
+@media screen and (max-width: 780px) {
+  .product_img {
+    width: 100px;
+    height: 150px;
+  }
+}
+
+.btn_addcart {
+  float: right;
+  width: 100px;
+}
+
+@media screen and (max-width: 780px) {
+  .btn_addcart {
+    width: 100px;
+    margin-top: 10px;
+  }
+}
+
+.btn_remove {
+  position: relative;
+  float: right;
+  width: 150px;
+  height: 40px;
+  border-radius: 20px;
+}
+
+.btn_login {
+  width: 180px;
+  height: 60px;
+  position: relative;
+  float: right;
+  border-radius: 30px;
+}
+
+.title {
+  font-size: 30px;
+  font-style: normal;
+  font-weight: bold;
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  padding: 15px;
+  margin: 0;
+  display: inline-block;
+}
+
+.btn_nav {
+  margin: 20px;
+  float: right;
+  color: #4d94ff;
+  background-color: white;
+  padding: 8px;
+  border: none;
+  width: 80px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.btn_home {
+  float: right;
+  color: #4d94ff;
+  background-color: white;
+  border: none;
+  font-weight: bold;
+  margin: 15px;
+  padding: 10px;
+}
+
+.btn_addcart, .btn_remove, .btn_login {
+  background-color: #4d94ff;
+  color: white;
+  padding: 8px;
+  border: none;
+  font-weight: bold;
+}
+
+.btn_login {
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 5%;
+  display: block;
+  float: none;
+  font-size: 20px;
+}
+
+.fas {
+  color: #4d94ff;
+  padding-right: 5px;
+}
+
+.fab {
+  color: white;
+  padding-right: 15px;
+}
+
+.btn_nav:hover,
+.btn_addcart:hover, .btn_remove:hover, .btn_home:hover, .btn_login:hover {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  background-color: #99c2ff;
+}
+
+.category {
+  margin-left: 2%;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  color: #0066ff;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  height: 70px;
+  width: 100%;
+  background-color: #4d94ff;
+  margin: 0;
+  display: inline-block;
+}
+
+.layout {
+  top: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 1;
+  position: sticky;
+}
+
+.layout_nav {
+  display: inline-block;
+  float: right;
+  font-size: 20px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  padding: 20px;
+}
+
+.layout_nav:hover {
+  background-color: #4d94ff;
+  color: white;
+  text-decoration: none;
+}
+
+.layout_text {
+  font-size: 20px;
+  color: white;
+  padding: 20px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+@media screen and (max-width: 780px) {
+  .layout_nav, .layout_text {
+    padding: 15px;
+  }
+}
+
+.quantity {
+  float: left;
+  font-weight: bold;
+  padding: 5px;
+  padding-left: 0px;
+}
+
+.quantity_input {
+  float: left;
+  width: 35px;
+  height: 20px;
+}
+
+.footer, .footer-login, .footer-order {
+  background-color: #1a75ff;
+  width: 100%;
+  bottom: 0;
+}
+
+.footer-cart {
+  background-color: #1a75ff;
+  width: 100%;
+}
+
+.foot {
+  width: 23%;
+  padding: 10px;
+  display: inline-block;
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 780px) {
+ .footer-cart, .footer-order {
+    bottom: 0;
+    position: relative;
+  }
+}
+@media screen and (max-width: 780px) {
+.footer-login {
+  bottom: 0;
+    position: absolute;
+}
+}
+.cart_empty {
+  padding: 95px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/*@media screen and (max-width: 780px){
+  .cart_empty{
+    padding-bottom:106%;
+  }
+}*/
+.foot_txt {
+  color: white;
+  margin: 20px;
+  font-weight: bold;
+}
+
+.foot_heading {
+  margin: 20px;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+@media screen and (max-width: 780px) {
+  .foot {
+    width: 24%;
+    padding: 0;
+    padding-bottom: 10px;
+  }
+}
+
+.cart_box {
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 5%;
+  margin-top: 2%;
+  padding: 20px;
+  width: 86%;
+}
+
+.cart_box_heading {
+  margin: 2%;
+  font-size: 40px;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+.total_price {
+  margin: 2%;
+  font-size: 30px;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  float: right;
+}
+
+.cart_img {
+  float: left;
+  width: 150px;
+  height: 150px;
+  padding: 2%;
+  position: relative;
+}
+
+.cart_product_name, .cart_product_price, .cart_product_quatity, .order_product_name, .order_product_price, .order_product_quatity {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.user_name, .user_time, .user_email, .user_address {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 20px;
+  font-family: sans-serif;
+  color: #4d94ff;
+}
+
+@media screen and (max-width: 780px) {
+  .user_name, .user_time, .user_email, .user_address {
+    font-size: 15px;
+  }
+
+  .order_product_name, .order_product_price, .order_product_quatity {
+    font-size: 13px;
+  }
+}
+
+.user_info {
+  border-style: outset;
+  width: 90%;
+  margin: 20px auto;
+  display: block;
+}
+
+@media screen and (max-width: 780px) {
+  .user_info {
+    padding: 2%;
+  }
+}
+
+.product_info {
+  margin: 0 auto;
+  display: block;
+  padding: 2%;
+}
+
+.cart_product {
+  width: 90%;
+  border-style: outset;
+  margin: 20px auto;
+  display: block;
+  border-radius: 20px;
+}
+
+.cart_product:hover {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.login_text {
+  text-align: center;
+  font-weight: bold;
+}
+
+.login_div, .home_div {
+  padding: 5%;
+}
+
+.login_form {
+  border-style: outset;
+  width: 60%;
+  margin: 5% auto;
+  display: block;
+}
+
+@media screen and (max-width: 780px) {
+  .login_div {
+    margin-bottom: 5%;
+  }
+}
+
+.input_login {
+  width: 60%;
+  border: 2px solid #dddddd;
+  border-radius: 4px;
+  padding: 15px;
+  display: block;
+  margin: 15px auto;
+}
+
+label.login_text {
+  font-size: 20px;
+  margin-left: 20%;
+  margin-top: 5%;
+}
+
+.login_heading {
+  font-size: 40px;
+  color: #4d94ff;
+  text-align: center;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+}
