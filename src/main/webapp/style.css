@@ -177,7 +177,7 @@
   border-radius: 20px;
 }
 
-.btn_login {
+.btn_login,.btn_pay {
   width: 180px;
   height: 60px;
   position: relative;
@@ -218,7 +218,7 @@
   padding: 10px;
 }
 
-.btn_addcart, .btn_remove, .btn_login {
+.btn_addcart, .btn_remove, .btn_login,.btn_pay {
   background-color: #4d94ff;
   color: white;
   padding: 8px;
@@ -226,7 +226,7 @@
   font-weight: bold;
 }
 
-.btn_login {
+.btn_login,.btn_pay {
   margin: auto;
   margin-top: 20px;
   margin-bottom: 5%;
@@ -246,7 +246,7 @@
 }
 
 .btn_nav:hover,
-.btn_addcart:hover, .btn_remove:hover, .btn_home:hover, .btn_login:hover {
+.btn_addcart:hover, .btn_remove:hover, .btn_home:hover, .btn_login:hover,.btn_pay:hover {
   box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
   background-color: #99c2ff;
 }
@@ -473,7 +473,7 @@ nav {
   box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
-.login_text {
+.login_text{
   text-align: center;
   font-weight: bold;
 }
@@ -488,6 +488,14 @@ nav {
   margin: 5% auto;
   display: block;
 }
+.payment_form{
+  border-style: outset;
+  width:40%;
+  margin-top:5%;
+  margin-bottom: 5%;
+  margin-left:5%; 
+  display:inline-block;
+}
 
 @media screen and (max-width: 780px) {
   .login_div {
@@ -495,7 +503,7 @@ nav {
   }
 }
 
-.input_login {
+.input_login,.input_payment {
   width: 60%;
   border: 2px solid #dddddd;
   border-radius: 4px;
@@ -504,16 +512,95 @@ nav {
   margin: 15px auto;
 }
 
-label.login_text {
+label.login_text,label.container {
   font-size: 20px;
   margin-left: 20%;
   margin-top: 5%;
 }
-
-.login_heading {
+.payment_text{
+  text-align: left;
+  margin-left: 15%;
+  font-size: 20px;
+  margin-bottom: 7%;
+  font-weight: bold;
+}
+.login_heading,.payment_heading {
   font-size: 40px;
   color: #4d94ff;
   text-align: center;
   font-weight: bold;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.container input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.price {
+  margin: 2%;
+  font-size: 20px;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  float: right;
+}
+.total{
+  margin: 2%;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
 }

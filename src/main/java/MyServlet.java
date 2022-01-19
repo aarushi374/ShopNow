@@ -104,7 +104,7 @@ public class MyServlet extends HttpServlet {
 			myProducts product = new myProducts(email_login, password_login);
 			String result = register.login(product);
 			if (result.equals("authentication successful")) {
-				response.sendRedirect("Order.jsp?email=" + email_login);
+				response.sendRedirect("Payment.jsp?email=" + email_login);
 			} else if (result.equals("authentication unsuccessful")) {
 				String message = "Email or Password Incorrect";
 				request.setAttribute("message", message);
@@ -116,6 +116,19 @@ public class MyServlet extends HttpServlet {
 			if (result.equals("cart is now empty")) {
 				response.sendRedirect("index.html");
 			} else {
+				out.println("<script type='text/javascript'>");
+				out.println("alert(" + "'" + result + "'" + ");</script>");
+			}
+		}
+		if(request.getParameter("change_address")!=null)
+		{
+			String new_address=request.getParameter("new_address");
+			String email=request.getParameter("change_address");
+			String result=register.changeAddress(new_address,email);
+			if(result=="Address update successful")
+			{
+				response.sendRedirect("Payment.jsp?email=" + email);
+			}else {
 				out.println("<script type='text/javascript'>");
 				out.println("alert(" + "'" + result + "'" + ");</script>");
 			}

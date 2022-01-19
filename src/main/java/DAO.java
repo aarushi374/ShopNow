@@ -73,6 +73,22 @@ public class DAO {
 		}
 		return result;
 	}
+	public String changeAddress(String new_address,String email) {
+		String sql="update signup set address=? where email=?";
+		String result="Address update successful";
+		PreparedStatement ps;
+		Connection con = DBconnection.initializeDatabase();
+		try {
+
+			ps = con.prepareStatement(sql);
+			ps.setString(1, new_address);
+			ps.setString(2, email);
+			ps.executeUpdate();
+		} catch (Exception e) {
+			result = "sql error";
+		}
+		return result;
+	}
 
 	public String deleteCart() {
 		String sql = "delete from product";
